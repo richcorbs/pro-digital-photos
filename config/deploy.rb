@@ -32,6 +32,7 @@ after "deploy", "deploy:cleanup"
 # Create .htaccess
 after 'deploy:create_symlink', 'pdphotos:drop_htaccess'
 after 'deploy:create_symlink', 'pdphotos:database_yml'
+after 'deploy:create_symlink', 'pdphotos:uploads_symlink'
 after 'deploy:create_symlink', 'pdphotos:restart'
 
 
@@ -55,4 +56,9 @@ namespace 'pdphotos' do
   task :restart, :roles => :app do
     run "touch #{current_path}/tmp/restart.txt"
   end
+
+  task :uploads_symlink, :roles => :app do
+    run "ln -s #{shared_path}/uploads #{current_path}/public/uploads"
+  end
+
 end
