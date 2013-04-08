@@ -8,5 +8,7 @@
 - else
   = render :partial => 'double_column'
 
+
 - if can?(:manage, @page)
+  .clear
   = render 'admin_actions'
