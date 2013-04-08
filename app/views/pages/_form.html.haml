@@ -33,16 +33,28 @@
         Title:
         %br
         = f.text_field :title, :'data-tooltip' => 'Try to make this unique and memorable', :placeholder => 'Page Title', :style => 'width: 250px', :tabindex => 4
+        %br
+        %br
+        %em By default the title above will be displayed on the page but you have the option.
+        %p
+        = f.check_box :display_title, :tabindex => 5
+        display title on page?
     %tr
       %td
         Display Name:
         %br
-        = f.text_field :display_name, :'data-tooltip' => 'The text to display on the link (defaults to title if blank)', :placeholder => 'My Page Title', :style => 'width: 250px', :disabled => f.object.display_name == 'Home', :tabindex => 5
+        = f.text_field :display_name, :'data-tooltip' => 'The text to display on the link (defaults to title if blank)', :placeholder => 'My Page Title', :style => 'width: 250px', :disabled => f.object.display_name == 'Home', :tabindex => 6
     %tr
       %td
         Description:
         %br
-        = f.text_area :description, :'data-tooltip' => 'Write a 1-2 sentence description of the page', :placeholder => 'This page is about specialized print products and other stuff...', :style => 'width: 550px; height: 100px', :tabindex => 6
+        = f.text_area :description, :'data-tooltip' => 'Write a 1-2 sentence description of the page', :placeholder => 'This page is about specialized print products and other stuff...', :style => 'width: 550px; height: 100px', :tabindex => 7
+        %br
+        %br
+        %em By default the description above will be displayed on the page but you have the option.
+        %br
+        = f.check_box :display_description, :tabindex => 5
+        display description on page?
     %tr
       %td
         - if @page.photo.new_record?
@@ -60,12 +72,12 @@
       %td
         Change Frequency:
         %br
-        = f.select :change_frequency, options_for_select(%w(always hourly daily weekly monthly yearly never), 'weekly'), {}, :'data-tooltip' => 'How often does this page change?', :tabindex => 7
+        = f.select :change_frequency, options_for_select(%w(always hourly daily weekly monthly yearly never), 'weekly'), {}, :'data-tooltip' => 'How often does this page change?', :tabindex => 8
     %tr
       %td
         Priority:
         %br
-        = f.select :priority, options_for_select((0..10).to_a.collect{|i| i/10.0}, 0.5), {}, :'data-tooltip' => 'How important is this page?', :tabindex => 8
+        = f.select :priority, options_for_select((0..10).to_a.collect{|i| i/10.0}, 0.5), {}, :'data-tooltip' => 'How important is this page?', :tabindex => 9
     %tr
       %td
         Page Content:
@@ -75,40 +87,40 @@
         = link_to 'yellow', nil, :class => 'button insert-yellow-box', :'data-tooltip' => 'Insert a yellow callout box', :'data-gravity' => 's', :tabindex => -1
         = link_to 'ul', nil, :class => 'button insert-ul', :'data-tooltip' => 'Insert a list of items', :'data-gravity' => 's', :tabindex => -1
         = link_to 'a', nil, :class => 'button insert-a', :'data-tooltip' => 'Insert a link', :'data-gravity' => 's', :tabindex => -1
-        = f.text_area :content, :style => 'width: 550px; height: 500px', :placeholder => '<p>Write your page content here...</p>', :id => 'page-content', :tabindex => 9
+        = f.text_area :content, :style => 'width: 550px; height: 500px', :placeholder => '<p>Write your page content here...</p>', :id => 'page-content', :tabindex => 10
     %tr
       %td.center
         Show content be above or below?
         %br
         %br
         %label
-          = f.check_box :is_content_on_top, :tabindex => 1
+          = f.check_box :is_content_on_top, :tabindex => 11
           show content on top
     %tr#attach-product-button-row
       %td.center
-        = link_to 'Attach Product', nil, :class => 'button', :id => 'attach-product-button', :tabindex => 10
+        = link_to 'Attach Product', nil, :class => 'button', :id => 'attach-product-button', :tabindex => 12
     %tr#attach-product-row.none
       %td
         - if @page.product.nil? || @page.product.new_record?
           Existing Product:
-          = f.select :product_id, options_for_select(Product.active.all.collect{|p| [p.name, p.id]}, f.object.product_id), {:include_blank => 'Select a Product...'}, :style => 'margin-right: 15px; width: 352px;', :tabindex => 10
-          = link_to 'New Product', nil, :class => 'button', :id => 'new-product-button', :tabindex => 11
+          = f.select :product_id, options_for_select(Product.active.all.collect{|p| [p.name, p.id]}, f.object.product_id), {:include_blank => 'Select a Product...'}, :style => 'margin-right: 15px; width: 352px;', :tabindex => 13
+          = link_to 'New Product', nil, :class => 'button', :id => 'new-product-button', :tabindex => 14
         - else
-          = f.select :product_id, options_for_select(Product.active.all.collect{|p| [p.name, p.id]}, f.object.product_id), {:include_blank => 'Select a Product...'}, :style => 'margin-right: 15px; width: 415px;', :tabindex => 10
-          = link_to 'X', root_path, :class => 'button', :id => 'remove-product-button', :style => 'margin-right: 15px;', :tabindex => 11
-          = link_to 'Edit Product', nil, :class => 'button', :id => 'edit-product-button', :tabindex => 12
+          = f.select :product_id, options_for_select(Product.active.all.collect{|p| [p.name, p.id]}, f.object.product_id), {:include_blank => 'Select a Product...'}, :style => 'margin-right: 15px; width: 415px;', :tabindex => 15
+          = link_to 'X', root_path, :class => 'button', :id => 'remove-product-button', :style => 'margin-right: 15px;', :tabindex => 16
+          = link_to 'Edit Product', nil, :class => 'button', :id => 'edit-product-button', :tabindex => 17
 
     = f.fields_for :product do |ff|
       %tr.product-row.none
         %td
           Product Name:
           %br
-          = ff.text_field :name, :'data-tooltip' => 'Name of the product - this is for internal reference only', :placeholder => 'Greeting Card', :style => 'width: 250px', :tabindex => 12
+          = ff.text_field :name, :'data-tooltip' => 'Name of the product - this is for internal reference only', :placeholder => 'Greeting Card', :style => 'width: 250px', :tabindex => 18
       %tr.product-row.none
         %td
           Dakis URL:
           %br
-          = ff.text_field :dakis_url, :'data-tooltip' => 'The dakis URL', :placeholder => 'http://photominator.dakis.com/?a=12a9d&b=29sl', :style => 'width: 250px', :tabindex => 13
+          = ff.text_field :dakis_url, :'data-tooltip' => 'The dakis URL', :placeholder => 'http://photominator.dakis.com/?a=12a9d&b=29sl', :style => 'width: 250px', :tabindex => 19
       %tr.product-row.none
         %td
           Product Content:
@@ -118,7 +130,7 @@
           = link_to 'yellow', nil, :class => 'button insert-yellow-box', :'data-tooltip' => 'Insert a yellow callout box', :'data-gravity' => 's', :tabindex => -1
           = link_to 'ul', nil, :class => 'button insert-ul', :'data-tooltip' => 'Insert a list of items', :'data-gravity' => 's', :tabindex => -1
           = link_to 'a', nil, :class => 'button insert-a', :'data-tooltip' => 'Insert a link', :'data-gravity' => 's', :tabindex => -1
-          = ff.text_area :content, :style => 'width: 550px; height: 500px', :placeholder => '<p>Write your product content here...</p>', :id => 'product-content', :tabindex => 14
+          = ff.text_area :content, :style => 'width: 550px; height: 500px', :placeholder => '<p>Write your product content here...</p>', :id => 'product-content', :tabindex => 20
 
           - # need this or else the DOM is fucked up
           = ff.hidden_field :id
@@ -139,7 +151,7 @@
           = link_to 'Add Photo', nil, :id => 'add-photo-button', :class => 'button'
 
   #page-submit-button{:style => 'margin: 0 auto; width: 604px'}
-    = f.submit :class => 'button', :style => 'width: 604px', :tabindex => 15
+    = f.submit :class => 'button', :style => 'width: 604px', :tabindex => 21
 
 :javascript
   $(function() {
