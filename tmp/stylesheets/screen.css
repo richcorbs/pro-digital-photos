@@ -279,8 +279,8 @@ img.photo {
   -webkit-box-shadow: 1px 1px 5px #cccccc;
   -moz-box-shadow: 1px 1px 5px #cccccc;
   box-shadow: 1px 1px 5px #cccccc;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-  opacity: 0.75;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
   padding: 0.5em;
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
@@ -291,8 +291,8 @@ img.photo {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s; }
   img.photo:hover {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1; }
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+    opacity: 0.75; }
 
 table tr td.center {
   text-align: center; }
