@@ -8,7 +8,7 @@ set :deploy_to, "/home1/prodigi6/www/#{application}"
 set :use_sudo, false
 
 # Git
-set :repository,  'git@github.com:plaidlock/pro-digital-photos.git'
+set :repository,  'git@github.com:richcorbs/pro-digital-photos.git'
 set :branch, 'master'
 
 # More Git

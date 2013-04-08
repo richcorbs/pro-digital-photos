@@ -1,0 +1,84 @@
+/*
+Syntax error: Invalid CSS after "elements-of-type": expected selector, was "(html5-block)"
+        on line 116 of app/stylesheets/compass/reset/_utilities.scss, in `reset-html5'
+        from line 34 of app/stylesheets/compass/reset/_utilities.scss, in `global-reset'
+        from line 3 of app/stylesheets/compass/_reset.scss
+        from line 1 of app/stylesheets/screen.scss
+
+111:       padding: 20px;
+112: 
+113:       .left {
+114:         width: 240px;
+115:       }
+116: 
+117:       .right {
+118:         width: 714px;
+119:       }
+120: 
+121:       .box {
+
+Backtrace:
+app/stylesheets/compass/reset/_utilities.scss:116:in `reset-html5'
+app/stylesheets/compass/reset/_utilities.scss:34:in `global-reset'
+app/stylesheets/compass/_reset.scss:3
+app/stylesheets/screen.scss:1
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/scss/parser.rb:1148:in `expected'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/scss/parser.rb:1084:in `expected'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/scss/static_parser.rb:21:in `parse_selector'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:314:in `visit_rule'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:268:in `block (3 levels) in visit_mixin'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:268:in `map'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:268:in `block (2 levels) in visit_mixin'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:268:in `block in visit_mixin'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:70:in `perform_arguments'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:263:in `visit_mixin'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:268:in `block (3 levels) in visit_mixin'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:268:in `map'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:268:in `block (2 levels) in visit_mixin'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:268:in `block in visit_mixin'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:70:in `perform_arguments'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:263:in `visit_mixin'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `map'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/root_node.rb:20:in `render'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:299:in `block in watch'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/listen-0.5.3/lib/listen/multi_listener.rb:86:in `call'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/listen-0.5.3/lib/listen/multi_listener.rb:86:in `on_change'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/listen-0.5.3/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/listen-0.5.3/lib/listen/adapter.rb:196:in `call'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/listen-0.5.3/lib/listen/adapter.rb:196:in `report_changes'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/listen-0.5.3/lib/listen/adapter.rb:208:in `poll_changed_dirs'
+/Users/rich/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/listen-0.5.3/lib/listen/adapters/darwin.rb:38:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"elements-of-type\": expected selector, was \"(html5-block)\"\A         on line 116 of app/stylesheets/compass/reset/_utilities.scss, in `reset-html5'\A         from line 34 of app/stylesheets/compass/reset/_utilities.scss, in `global-reset'\A         from line 3 of app/stylesheets/compass/_reset.scss\A         from line 1 of app/stylesheets/screen.scss\A \A 111:       padding: 20px;\A 112: \A 113:       .left {\A 114:         width: 240px;\A 115:       }\A 116: \A 117:       .right {\A 118:         width: 714px;\A 119:       }\A 120: \A 121:       .box {"; }

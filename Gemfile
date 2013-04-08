@@ -11,7 +11,7 @@ gem 'fog'
 gem 'haml'
 gem 'jquery-rails'
 gem 'mini_magick'
-gem 'mysql2'
+gem 'mysql2', "< 0.3"
 gem 'rails', '3.0.10'
 gem 'rake'
 gem 'rdoc'

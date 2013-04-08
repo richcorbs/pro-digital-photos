@@ -12,14 +12,14 @@
     = csrf_meta_tag
 
   %body
-    / header
-    #header
-      / logo
-      = link_to '', root_path, :id => 'logo', :title => 'Pro Digital Photos'
-      = render 'layouts/main_nav'
-
     #wrapper
+      - if logged_in?
+        = link_to 'Logout', logout_path, :method => :delete, :class => "float-right"
       #inner-wrapper
+        / logo
+        = link_to '', root_path, :id => 'logo', :title => 'Pro Digital Photos'
+        = render 'layouts/main_nav'
+
         #content
           - flash.each do |flash_name, value|
             %div{:class => 'flash', :id => flash_name}!= value
@@ -27,8 +27,5 @@
           / content
           = yield
           / / content
+          %div.centered Copyright &copy; 2002 - #{Time.now.strftime('%Y')} Pro Digital Photos, Inc. All Rights Reserved
 
-    #footer_push
-    / footer
-    #footer
-      %span Copyright &copy; 2002 - #{Time.now.strftime('%Y')} Pro Digital Photos, Inc. All Rights Reserved

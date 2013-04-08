@@ -60,7 +60,7 @@ class PagesController < ApplicationController
 
   def destroy
     if @page.destroy
-      redirect_to pages_path, :notice => 'Page was destroyed!'
+      redirect_to "/home", :notice => 'Page was destroyed!'
     else
       flash.now[:error] = @page.errors.full_messages.join('<br />').html_safe
       render :action => 'edit'

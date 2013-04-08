@@ -16,9 +16,11 @@ html, body {
 }
 
 body {
-  background: $light-blue;
+  /* background: $light-blue; */
+  background: url(/images/background_repeat.jpg);
   color: #4e4e4e;
-  font-family: verdana;
+  /* font-family: verdana; */
+  font-family: "Californian FB", Constantia, "Bookman Old Style", "Bookman Antiqua", Georgia;
   font-size: 12px;
   line-height: 15px;
 }
@@ -56,56 +58,64 @@ a {
   height: 85px;
   padding: 50px 0 0 0;
 
-  #logo {
-    background: url('/images/logo.gif') no-repeat;
-    display: block;
-    position: absolute;
-    left: 50%;
-    margin-left: -81.5px;
-    height: 122px;
-    top: 0;
-    width: 163px;
-  }
-
-  ul#main-nav {
-    height: 30px;
-    line-height: 30px;
-    width: 100%;
-
-    li {
-      padding: 0 10px;
-
-      a {
-        color: #ffffff;
-        font-size: 11px;
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
-
-        &:hover {
-          color: $light-blue;
-        }
-      }
-    }
-  }
 }
 
 #wrapper {
   width: 1024px;
   top: 0;
 
-  min-height: 100%;
+  background-color: #ffffff;
+  min-height: 1024px;
   height: auto !important;
   height: 100%;
-  margin: -135px auto -35px auto; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto;
+  padding: 10px;
+  //margin: -135px auto -35px auto; /* the bottom margin is the negative value of the footer's height */
+  @include box-shadow(0 0 15px $light-blue/3);
 
   #inner-wrapper {
-    padding: 150px 0 90px 0;
+    /* padding: 150px 0 90px 0; */
 
+    #logo {
+      background: url('/images/logo.jpg') no-repeat;
+      display: block;
+      height: 122px;
+      left: 10px;
+      margin-left: 0px;
+      margin-bottom: 20px;
+      width: 363px;
+    }
+
+    ul#main-nav {
+      height: 30px;
+      line-height: 30px;
+      margin-top:-10px;
+      width: 100%;
+      list-style-type: disc;
+      color: #873506;
+
+      li {
+        padding: 0 30px 0 8px;
+
+        a {
+          //color: #ffffff;
+          color: #873506;
+          font-size: 15px;
+          font-weight: bold;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $light-blue;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
     #content {
       background: #ffffff;
-      @include border-radius(10px);
-      @include box-shadow(0 0 15px $light-blue/3);
+      //@include border-radius(10px);
+      //@include box-shadow(0 0 15px $light-blue/3);
       margin: 0 auto;
       padding: 20px;
 
@@ -410,6 +420,20 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus
     @include background-image(linear-gradient(#ffffff, #f7f7f7));
   }
 
+  &.brown {
+    @include background-image(linear-gradient(#996600, #663300));
+    border: 1px solid #990000;
+    @include border-radius(5px);
+    color: #ffffff;
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px 7px;
+    text-decoration: none;
+  }
+    &:hover {
+      @include background-image(linear-gradient(#996600, #966300));
+    }
+
   &.red {
     @include background-image(linear-gradient(#ff0000, #ee0000));
     border: 1px solid #990000;
@@ -514,6 +538,12 @@ ul.row {
 //
 label {
   white-space: nowrap;
+}
+.centered {
+  text-align: center;
+}
+.first-menu {
+  list-style-type: none;
 }
 
 //

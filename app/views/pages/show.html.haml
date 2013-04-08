@@ -1,4 +1,5 @@
-= breadcrumbs(@page)
+- if @page.has_children? || @page.parent
+  = breadcrumbs(@page)
 
 - if @root_page.descendants.empty?
   = render :partial => 'single_column'
