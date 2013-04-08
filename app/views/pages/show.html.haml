@@ -1,4 +1,4 @@
-- if @page.ancestors.present? || @page.descendants.present?
+- if not @page.is_root? && (@page.ancestors.present? || @page.descendants.present?)
   = breadcrumbs(@page)
   %p
     %em= @page.description
