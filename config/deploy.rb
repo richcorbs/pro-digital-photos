@@ -30,9 +30,9 @@ role :db,  '69.195.124.63', :primary => true
 after "deploy", "deploy:cleanup"
 
 # Create .htaccess
+after 'deploy:create_symlink', 'pdphotos:uploads_symlink'
 after 'deploy:create_symlink', 'pdphotos:drop_htaccess'
 after 'deploy:create_symlink', 'pdphotos:database_yml'
-after 'deploy:create_symlink', 'pdphotos:uploads_symlink'
 after 'deploy:create_symlink', 'pdphotos:restart'
 
 

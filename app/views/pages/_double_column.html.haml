@@ -6,6 +6,8 @@
     %ul#sidebar-navigation
       = sidebar_navigation(@root_page.descendants.active.arrange(:order => :display_order))
     .foot
+  %p
+    %em= @page.description
 .right.float-right
   - if @page.display_title?
     %h1= @page.title
