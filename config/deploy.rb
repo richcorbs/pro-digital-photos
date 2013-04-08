@@ -41,7 +41,7 @@ namespace 'pdphotos' do
       echo 'Options -MultiViews' > #{htaccess}; \
       echo 'PassengerResolveSymlinksInDocumentRoot on' >> #{htaccess}; \
       echo 'RailsEnv production' >> #{htaccess}; \
-      echo 'RackBaseURI /' >> #{htaccess}
+      echo 'RackBaseURI /' >> #{htaccess}; \
       echo 'SetEnv GEM_HOME /home1/prodigi6/ruby/gems' >> #{htaccess}; \
     "
   end
