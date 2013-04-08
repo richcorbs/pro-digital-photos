@@ -10,10 +10,6 @@
     %li.float-left= link_to '[+ new]', new_page_path
     %li.float-left= link_to '[hidden pages]', hidden_pages_path
 
-  %li.float-right.first-menu
-    = text_field_tag "email", "", :style => "padding:6px;"
-    %button.button.brown Newsletter Sign Up
-
   / right nav
   - Page.active.roots.right_nav.order(:display_order).each do |page|
     %li.float-right{:id => "page_#{page.id}"}= link_to page.display_name, slug_path(page), :title => page.display_name
