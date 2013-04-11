@@ -6,7 +6,7 @@
     %ul#sidebar-navigation
       = sidebar_navigation(@root_page.descendants.active.arrange(:order => :display_order))
     .foot
-  %p
+  %p.description
     %em= @page.description
 .right.float-right
   - if @page.display_title?
@@ -40,8 +40,8 @@
 
     = @page.product.content.html_safe
 
-    - if !@page.is_content_on_top?
-      = @page.content.html_safe
+  - if !@page.is_content_on_top?
+    = @page.content.html_safe
 
 - if can?(:manage, Page)
   :javascript

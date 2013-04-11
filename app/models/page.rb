@@ -29,11 +29,11 @@ class Page < ActiveRecord::Base
     end
 
     def right_nav
-      self.where(['pages.right_nav = ?', true])
+      self.where(['pages.right_nav = ? and show_in_nav = ?', true, true])
     end
 
     def left_nav
-      self.where(['pages.right_nav = ?', false])
+      self.where(['pages.right_nav = ? and show_in_nav = ?', false, true])
     end
   end
 

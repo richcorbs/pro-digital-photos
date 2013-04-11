@@ -1,10 +1,11 @@
 %ul#main-nav
   / left nav
   - Page.active.roots.left_nav.order(:display_order).each_with_index do |page,idx|
-    - if idx == 0
-      %li.float-left.first-menu{:id => "page_#{page.id}"}= link_to page.display_name, slug_path(page), :title => page.display_name
-    - else
-      %li.float-left{:id => "page_#{page.id}"}= link_to page.display_name, slug_path(page), :title => page.display_name
+    - if page.show_in_nav?
+      - if idx == 0
+        %li.float-left.first-menu{:id => "page_#{page.id}"}= link_to page.display_name, slug_path(page), :title => page.display_name
+      - else
+        %li.float-left{:id => "page_#{page.id}"}= link_to page.display_name, slug_path(page), :title => page.display_name
 
   - if can?(:create, Page)
     %li.float-left= link_to '[+ new]', new_page_path
