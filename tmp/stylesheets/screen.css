@@ -57,6 +57,7 @@ body {
   /* font-family: verdana; */
   font-family: "Californian FB", Constantia, "Bookman Old Style", "Bookman Antiqua", Georgia;
   font-size: 12px;
+  height: 100%;
   line-height: 15px; }
 
 * {
@@ -93,8 +94,10 @@ a {
   background-color: #ffffff;
   height: auto !important;
   height: 100%;
-  margin: 0 auto;
+  min-height: 100%;
   padding: 10px;
+  margin: 0 auto -30px auto;
+  /* the bottom margin is the negative value of the footer's height */
   -webkit-box-shadow: 0 0 15px #3e4955;
   -moz-box-shadow: 0 0 15px #3e4955;
   box-shadow: 0 0 15px #3e4955; }
@@ -394,17 +397,17 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus
   color: #640000; }
 
 #footer {
-  background: url("/images/footer.gif") repeat-x bottom;
-  color: #ffffff;
+  color: #663300;
   font-size: 10px;
-  text-align: right;
+  text-align: center;
   width: 100%; }
   #footer span {
     margin: 0 10px 0 0; }
 
 #footer, #footer-push {
-  height: 35px;
-  line-height: 43px; }
+  height: 10px;
+  line-height: 15px;
+  padding: 10px; }
 
 .none {
   display: none; }
